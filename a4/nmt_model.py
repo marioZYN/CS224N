@@ -265,8 +265,8 @@ class NMT(nn.Module):
             Ybar_t = torch.cat([Y_t, combined_outputs[-1]], dim=1) # (b, e+h)
             dec_state, combined_output, _ = self.step(Ybar_t, dec_state, enc_hiddens, enc_hiddens_proj, enc_masks)
             combined_outputs.append(combined_output)
-        ### END YOUR CODE
         combined_outputs = torch.stack(combined_outputs[1:], dim=0)
+        ### END YOUR CODE
         return combined_outputs
 
 
