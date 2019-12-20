@@ -13,3 +13,27 @@ Word-based lookup model has more parameters, about thousand times more.
 (d) max pooling selects the most significant value while average pooling smooth all the values.
 * max pooling: keeps the most significant value, but can lose some info
 * average pooling: keeps all the info, but can have noise
+
+## 3. Analyzing NMT Systems
+(a) 
+* occur: traducir, traduce
+* not occur: traduzco, traduces, traduzca, traduzcas
+
+In word-based NMT, we can not predict words which didn't appear in the word dictionary, thus the translation quality is limited by the quality of the word dic.
+
+In character-aware NMT model, we can predict \<unk\> word.
+
+(b) orignal - word2vec - charEmbed
+* finacial - economic - 
+* neuron - nerve - Newton
+* Francisco - san - France
+* naturally - occuring - pracitcally
+* expectation - norms - exception
+
+(c)
+* word2vec: semantic similarity
+* charcnn: structure similarity
+
+Word2vec is trained under the hyposis that similar words have similar context, thus it learns the semantic meaning of each word. In most times, given a sentence we could substitude the original word with the nearest neighbour word.
+
+CharCnn learns the word embeddings from convolution window, thus it preserves word structures. 
